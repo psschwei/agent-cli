@@ -21,8 +21,6 @@ var runCmd = &cobra.Command{
 Examples:
     hive-cli run -f agent.py`,
 	RunE: func(cmd *cobra.Command, args []string) error {
-
-		fmt.Println("Running an agent on my laptop...")
 		return runAgent(AgentFile)
 	},
 }
@@ -47,6 +45,8 @@ func runAgent(file string) error {
 	}
 
 	fmt.Println("Agent is available at http://localhost:8000")
+	fmt.Println(`Sample command:
+curl -X POST --json '{"prompt" : What is the capital of the United States?"}' http://localhost:8000`)
 	fmt.Println("Press Ctrl+C to exit")
 
 	executeAgent := exec.Command("python", file)

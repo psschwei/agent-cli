@@ -15,8 +15,8 @@ var deployCmd = &cobra.Command{
 Examples:
     hive-cli deploy -f agent.py`,
 
-	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("Deploying an agent to Kubernetes...")
+	RunE: func(cmd *cobra.Command, args []string) error {
+		return deployAgent("")
 	},
 }
 
@@ -32,4 +32,9 @@ func init() {
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
 	// deployCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+}
+
+func deployAgent(source string) error {
+	fmt.Println("Coming soon: Deploying an agent to Kubernetes...")
+	return nil
 }
