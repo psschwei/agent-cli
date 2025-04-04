@@ -22,11 +22,11 @@ type acp struct {
 // queryCmd represents the query command
 var queryCmd = &cobra.Command{
 	Use:   "query",
-	Short: "Send a query to an agent",
-	Long: `Send a query to an agent.
+	Short: "Send a query to a remote agent",
+	Long: `Send a query to a remote agent.
 
 Example:
-   hive-cli query -p "What is the weather in San Francisco?" -h https://my-agent.example.com`,
+   hive query -p "What is the weather in San Francisco?" -h https://my-agent.example.com`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		return queryAgent(queryPrompt, queryHost)
 	},

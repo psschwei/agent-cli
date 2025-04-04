@@ -8,7 +8,7 @@ import (
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "hive-cli",
+	Use:   "hive",
 	Short: "Run and deploy your agents",
 	Long:  `Run and deploy your agents`,
 	// Uncomment the following line if your bare application

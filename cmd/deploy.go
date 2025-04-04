@@ -19,7 +19,7 @@ var deployCmd = &cobra.Command{
 	Long: `Deploy your agent to Kubernetes.
 
 Examples:
-    hive-cli deploy -t my-agent:latest`,
+    hive deploy -t my-agent:latest`,
 
 	RunE: func(cmd *cobra.Command, args []string) error {
 		return deployAgent(agentName, deployImage)
