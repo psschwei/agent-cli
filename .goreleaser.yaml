@@ -1,4 +1,4 @@
-project_name: hive-cli
+project_name: agent-cli
 version: 2
 
 builds:
@@ -11,7 +11,7 @@ builds:
     goarch:
       - amd64
       - arm64
-    binary: hive
+    binary: agent
 
 archives:
   - files:

@@ -6,7 +6,7 @@ import (
 	"os"
 	"os/exec"
 
-	"github.com/psschwei/hive-cli/pkg/utils"
+	"github.com/psschwei/agent-cli/pkg/utils"
 	"github.com/spf13/cobra"
 )
 

@@ -1,6 +1,6 @@
 package main
 
-import "github.com/psschwei/hive-cli/cmd"
+import "github.com/psschwei/agent-cli/cmd"
 
 func main() {
 	cmd.Execute()

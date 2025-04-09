@@ -1,4 +1,4 @@
-# hive-cli
+# agent-cli
 
 Command line tool for building / deploying AI agents to Kubernetes. Work in progress.
 
@@ -29,10 +29,10 @@ A full working example, using the BeeAI Framework, can be found [here](https://g
 
 ### Build your Agent
 
-Use the `hive build` command to build your agent using Docker. (If you don't have `docker`, this won't work)
+Use the `agent build` command to build your agent using Docker. (If you don't have `docker`, this won't work)
 
 ```bash
-hive build --dir /home/user/my-agent/src --tag icr.io/username/agent:latest
+agent build --dir /home/user/my-agent/src --tag icr.io/username/agent:latest
 ```
 
 ### Deplpy your Agent to Kubernetes
@@ -41,8 +41,8 @@ We assume you have `kubectl` configured to access some Kubernetes cluster.
 
 We also assume that you have deployed an `agent-configmap` and an `agent-secrets` as shown [here](https://github.com/psschwei/bees-in-a-pod/blob/main/config/deploy.yaml). This is required, even if your agent isn't using values from either (just deploy them with dummy values).
 
-Use the `hive deploy` command to deploy your containerized agent to Kubernetes.
+Use the `agent deploy` command to deploy your containerized agent to Kubernetes.
 
 ```bash
-hive deploy --name my-agent --tag icr.io/username/agent:latest
+agent deploy --name my-agent --tag icr.io/username/agent:latest
 ```

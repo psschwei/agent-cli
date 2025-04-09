@@ -1,4 +1,4 @@
-module github.com/psschwei/hive-cli
+module github.com/psschwei/agent-cli
 
 go 1.23.4
 
