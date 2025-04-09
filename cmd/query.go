@@ -26,7 +26,7 @@ var queryCmd = &cobra.Command{
 	Long: `Send a query to a remote agent.
 
 Example:
-   hive query -p "What is the weather in San Francisco?" -h https://my-agent.example.com`,
+   agent query -p "What is the weather in San Francisco?" -h https://my-agent.example.com`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		return queryAgent(queryPrompt, queryHost)
 	},

@@ -21,7 +21,7 @@ var buildCmd = &cobra.Command{
 	Long: `Build your agent into an OCI container.
 
 Example:
-    hive build -d "/home/user/my-agent/src" -t "my-agent:latest"`,
+    agent build -d "/home/user/my-agent/src" -t "my-agent:latest"`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		return buildAgent(workingDirectory, imageTag)
 	},
